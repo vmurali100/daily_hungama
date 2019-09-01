@@ -4,6 +4,9 @@ body {
     color: gray;
     font-weight: 400;
     font-size: 1rem; }
+    body {
+      background: lightgray;
+  }
   
   ::-moz-selection {
     background: #000;
@@ -1814,7 +1817,7 @@ section.main-section {
   top: 50px !important;
 }
 .services-2 {
-  height: 100px;
+  height: 170px;
 }
 
 img#movie_reviews {
@@ -1844,4 +1847,47 @@ h2.photos_list {
 .site-footer {
   padding: 20px !important;
   text-align: center;
+}
+
+.carousel-item.active {
+  height: 400px;
+}
+.main-section-lifeStyles{
+  background: white
+}
+.single-movie {
+  background: url(images/person_5.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  height: 250px;
+  width: 210px;
+  margin: 5px;
+  float: left;
+
+}   
+.movie-info {
+  text-align: center;
+  margin-top: 180px;
+  color: white;
+}
+.h-entry-photos {
+  width: 216px;
+  margin-left: 10px;
+}
+.watch-now {
+  background: white;
+  padding: 15px;
+}
+img.img-fluid {
+  opacity: 0.9;
+}
+img.img-fluid:hover {
+  opacity: 1;
+}
+
+.single-movie:hover {
+  -webkit-transform: scale(1.5,1.5); 
+  transform: scale(1.5,1.5);
+  -webkit-transition: all 0.3s ease-in-out;
 }
