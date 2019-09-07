@@ -74,7 +74,7 @@
           </div>
         </div>
       </header>
-      <div class="container mt-2">
+      <div class="container mt-2 breadCrumb">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -84,7 +84,7 @@
         </nav>
       </div>
       <section>
-        <div class="container">
+        <div class="container bgw pt-3 pb-1">
           <div class="row">
             <div class="col-lg-9">
               <div class="bd-example">
@@ -178,6 +178,23 @@
                   </a>
                 </div>
               </div>
+              <div class="slide_thum_nails">
+                <div class="thumb_nail">
+                  <img src="images/slide_1.jpg" alt="">
+                </div>
+                <div class="thumb_nail">
+                  <img src="images/slide_2.jpg" alt="">
+                </div>
+                <div class="thumb_nail">
+                  <img src="images/slide_3.jpg" alt="">
+                </div>
+                <div class="thumb_nail">
+                  <img src="images/slide_2.jpg" alt="">
+                </div>
+                <div class="thumb_nail">
+                  <img src="images/slide_3.jpg" alt="">
+                </div>
+              </div>
             </div>
             <div class="col-lg-3">
               <div class="services-flow">
@@ -220,7 +237,7 @@
           </div>
         </div>
       </section>
-      <div class="col-12 text-center">
+      <div class="container">
         <h2 class="section-title mb-3 mt-5">Movie News</h2>
       </div>
       <section>
@@ -337,8 +354,12 @@
           </div>
         </div>
       </section>
-
-      <section class="container movie-list-area">
+      <div class="container">
+        <div class="">
+          <h2 class="section-title mb-3 mt-3">Movies</h2>
+        </div>
+      </div>
+      <section class="container movie-list-area bgw pb-2 pt-2">
         <div class="row">
           <div class="col-12">
             <div class="single-movie">
@@ -374,8 +395,8 @@
           </div>
         </div>
       </section>
-      <div class="col-12 text-center">
-        <h2 class="section-title mb-3 mt-3">Political News</h2>
+      <div class="container">
+          <h2 class="section-title mb-3 mt-3">Political News</h2>
       </div>
       <section>
         <div class="container main-section-lifeStyles mb-2 pt-3">
@@ -489,12 +510,12 @@
           </div>
         </div>
       </section>
-      <div class="col-12 text-center">
+      <div class="container">
         <h2 class="section-title mb-3 mt-3">Photos Area</h2>
       </div>
       <section>
         <div class="container">
-          <div class="row" id="photos_area">
+          <div class="row main-section-lifeStyles pt-3 pl-2" id="photos_area">
             <div class="h-entry-photos">
               <h3>ACTRESS PHOTOS</h3>
               <a href="blog-single.html"
@@ -578,7 +599,7 @@
           </div>
         </div>
       </section>
-      <div class="col-12 text-center">
+      <div class="container">
         <h2 class="section-title mb-3 mt-3">Watch Now</h2>
       </div>
       <section class="container watch-now mb-2">
@@ -711,11 +732,6 @@
             });
             mainElement.css({ width: "260px" });
           }
-          // var allElements = $(".h-entry-photos");
-          // allElements.each(function(i, element) {
-          //   $(element).css({ width: "100px" });
-          // });
-          // $(currentElement).css({ width: "300px" });
         });
       });
     </script>

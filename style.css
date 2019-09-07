@@ -1817,7 +1817,7 @@ section.main-section {
   top: 50px !important;
 }
 .services-2 {
-  height: 170px;
+  height: 220px;
 }
 
 img#movie_reviews {
@@ -1885,9 +1885,25 @@ img.img-fluid {
 img.img-fluid:hover {
   opacity: 1;
 }
+.thumb_nail {
+  width: 150px;
+  height: 100px;
+  float: left;
+  margin: 7px;
+}
+.thumb_nail img {
+  width: 100%;
+  float: left;
+}
 
 .single-movie:hover {
   -webkit-transform: scale(1.5,1.5); 
   transform: scale(1.5,1.5);
   -webkit-transition: all 0.3s ease-in-out;
+}
+.bgw {
+  background: white;
+}
+.breadCrumb {
+  padding: 0;
 }
