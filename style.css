@@ -1874,6 +1874,7 @@ h2.photos_list {
 .h-entry-photos {
   width: 216px;
   margin-left: 10px;
+  float: left;
 }
 .watch-now {
   background: white;
@@ -1906,4 +1907,23 @@ img.img-fluid:hover {
 }
 .breadCrumb {
   padding: 0;
+}
+span.red-line {
+  width: 100px;
+  height: 1px;
+  border: 2px solid red;
+}
+span.red-line {
+  width: 100px;
+  height: 1px;
+  border: 2px solid red;
+  float: left;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.clear {
+  clear: both;
+}
+.float-l {
+  float: left;
 }
