@@ -2001,7 +2001,7 @@ img {width:100%;}
     .container {
       width: 95%;
     }
-
+  
   }
   .nav-container {
     width: 100%;
@@ -2017,6 +2017,7 @@ img {width:100%;}
     max-width: 80%;
 }
 
+
 }
 @media (max-width: 1199px){
   .container {
@@ -2027,4 +2028,19 @@ img {width:100%;}
   overflow: auto;
   display: block;
 }
+}
+.rating {
+  text-align: center;
+  background: url(images/rating.svg);
+  background-repeat: no-repeat;
+  background-size: 53%;
+  background-position: 46% 9%;
+  height: 21%;
+}
+.rating h3 {
+  visibility: hidden;
+}
+.slide_thum_nails {
+  overflow: hidden;
+  height: 115px;
 }

@@ -240,7 +240,7 @@
                     <br />
                   </div>
                   <div class="rating">
-                    <h6>Rating : 2.5</h6>
+                    <h3>Rating : 2.5</h3>
                   </div>
                 </div>
                 <div class="movie_review_area">
@@ -257,7 +257,7 @@
                     <br />
                   </div>
                   <div class="rating">
-                    <h6>Rating : 2.5</h6>
+                    <h3>Rating : 2.5</h3>
                   </div>
                 </div>
               </div>
@@ -856,11 +856,17 @@
       });
 
       $(window).resize(function (){
-        if($(window).width()>'768'){
+        if($(window).width()>768){
           var allElements = $(".h-entry-photos");
+         
           allElements.each(function(i, ele) {
               $(ele).css({ width: '95%' });
             });
+        }else{
+          var allRatins=$('.rating')
+          allRatins.each(function(i,ele){
+            $(ele).css({"background-size":"24% !important"})
+          })
         }
       })
       $(document).ready(function() {
