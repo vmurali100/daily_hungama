@@ -737,8 +737,8 @@
           <span class="red-line"></span>
         </div>
         <div class="row clear">
-          <div class="col-md-9">
-            <div class="embed-responsive embed-responsive-16by9">
+          <div class="col-lg-9">
+            <div class="embed-responsive embed-responsive-16by9 embed-responsive-movie ">
               <iframe
                 class="embed-responsive-item"
                 src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
@@ -746,7 +746,7 @@
               ></iframe>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3">
             <ul class="list-unstyled training">
               <li class="d-block d-lg-flex mb-2">
                 <div class="mr-2 img">
@@ -855,16 +855,26 @@
         interval: 2000
       });
 
+      $(window).resize(function (){
+        if($(window).width()>'768'){
+          var allElements = $(".h-entry-photos");
+          allElements.each(function(i, ele) {
+              $(ele).css({ width: '95%' });
+            });
+        }
+      })
       $(document).ready(function() {
         $("#photos_area").mouseover(function(event) {
           var currentElement = event.target.nodeName;
-          if (currentElement == "IMG") {
+          if (currentElement == "IMG" && $(window).width()>'768') {
             var mainElement = $(event.target.parentElement.parentElement);
             var allElements = $(".h-entry-photos");
-            allElements.each(function(i, ele) {
+            if($(window).width()>'768'){
+              allElements.each(function(i, ele) {
               $(ele).css({ width: "264px" });
             });
             mainElement.css({ width: "280px" });
+            }
           }
         });
         var allthumb_nails = $(".thumb_nail");

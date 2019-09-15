@@ -1862,7 +1862,7 @@ h2.photos_list {
   overflow: hidden;
   height: 300px !important;
   width: 210px;
-  margin: 5px;
+  margin: 8px;
   margin-top: 50px;
   float: left;
 
@@ -1878,7 +1878,7 @@ h2.photos_list {
   color: white;
 }
 .h-entry-photos {
-  /* width: 274px; */
+  width: 95%;
   margin-left: 5px;
   float: left;
 }
@@ -1955,7 +1955,13 @@ a.h-entry-photos-area img:hover {
   height: 100%;
   width: 100%;
 }
-
+.embed-responsive-movie {
+  margin: 5px;
+  width: 98%;
+}
+.carousel-inner{
+  height: 400px;
+}
 .divider {border: 1px solid #ccc;}
 img {width:100%;}
 
@@ -1994,7 +2000,8 @@ img {width:100%;}
   @media (max-width: 768px){
     .container {
       width: 95%;
-  }
+    }
+
   }
   .nav-container {
     width: 100%;
