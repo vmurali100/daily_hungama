@@ -2043,3 +2043,6 @@ img {width:100%;}
   overflow: hidden;
   height: 115px;
 }
+.col-lg-3{
+  padding: 10px !important
+}
