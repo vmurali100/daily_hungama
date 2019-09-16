@@ -230,7 +230,9 @@ body {
   
   .overlap-to-top {
     margin-top: -150px; }
-  
+    .h3, h3 {
+      font-size: 1.25rem;
+  }
   .ul-check {
     margin-bottom: 50px; }
     .ul-check li {
