@@ -1230,7 +1230,6 @@ body {
     margin: 0; }
     .ul-social-circle li {
       display: inline-block;
-      margin-left: 5px;
       margin-bottom: 5px; }
       .ul-social-circle li:first-child {
         margin-left: 0; }
