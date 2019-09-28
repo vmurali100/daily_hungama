@@ -108,63 +108,15 @@
         </div>
        
       </section>
-      <section class="site-section " id="blog-section">
-        <div class="container bgw">
-          <div class="row">
-            <div class="col-12 text-center">
-              <!-- <h2 class="section-title pt-3">Photos</h2> -->
-            </div>
-            <ul class="photos-area-info" id="photos-area-info">
-                <li><a href="#">Actor Photos</a></li>
-                <li><a href="#">Actress Photos</a></li>
-                <li><a href="#">Event Photos</a></li>
-                <li><a href="#">Movie Photos</a></li>
-            </ul>
-          </div>
-  
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-              <div class="h-entry">
-                <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"  onclick="saveImage(this.src)"></a>
-                </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-              <div class="h-entry">
-                <a href="image-show.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid" onclick="saveImage(this.src)"></a>
-                
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-              <div class="h-entry">
-                <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"  onclick="saveImage(this.src)"></a>
-                
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                 
-                </div> 
-              </div>
-              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <a href="image-show.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-                  
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                  
-                </div> 
-              </div>    
-          </div>
-          <div class="row">
-            
-            
-          </div>
-        </div>
-      </section>
+     <section>
+       <div class="container">
+         <div class="row">
+           <div class="col-md-12 mainImage-area">
+             <img src="" alt="" id ="mainImage">
+           </div>
+         </div>
+       </div>
+     </section>
 
       <footer class="site-footer">
         <div class="container">
@@ -206,25 +158,9 @@
       crossorigin="anonymous"
     ></script>
     <script>
-     document.getElementById("photos-area-info").onclick=function (event){
-        var allImages = document.getElementsByTagName("img")
-        if(event.target.innerHTML== "Actor Photos"){
-            for(i=0;i<allImages.length;i++){
-                var ino=i+1
-                allImages[i].setAttribute("src","images/actor"+ino+".jpg")
-            }
-        }else if(event.target.innerHTML== "Actress Photos"){
-            for(i=0;i<allImages.length;i++){
-                var ino=i+1
-                allImages[i].setAttribute("src","images/actress"+ino+".jpg")
-            } 
-            }
-     }
-     function saveImage(imageAddress){
-       console.log(imageAddress)
-       localStorage.setItem("imageAddress",imageAddress)
-      
-     }
+    var imageDetails=localStorage.getItem("imageAddress")
+    console.log(imageDetails)
+    document.getElementById("mainImage").setAttribute("src",imageDetails)
     </script>
   </body>
 </html>

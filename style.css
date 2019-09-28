@@ -2048,16 +2048,19 @@ img {width:100%;}
 .col-lg-3{
   padding: 10px !important
 }
-ul.photos-area {
+ul.photos-area-info {
   width: 100%;
   text-align: center;
 }
-.photos-area li {
+.photos-area-info li {
   display: inline-block;
   padding-top: 20px;
   margin-right: 50px;
 }
-img.img-fluid {
-  opacity: 0.9;
-  height: 450px;
+
+.mainImage-area {
+  text-align: center;
+}
+.mainImage-area img {
+  width: 50%;
 }
