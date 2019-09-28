@@ -108,16 +108,47 @@
         </div>
        
       </section>
-     <section>
-       <div class="container">
-         <div class="row">
-           <p><a href="gallery-page.html">Go To Gallery</a></p>
-           <div class="col-md-12 mainImage-area">
-             <img src="" alt="" id ="mainImage">
-           </div>
-         </div>
-       </div>
-     </section>
+      <section id="gallery_section">
+          <div class="container">
+                <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                          <div class="h-entry">
+                            <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"  onclick="saveImage(this.src)"></a>
+                            </div> 
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                          <div class="h-entry">
+                            <a href="image-show.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid" onclick="saveImage(this.src)"></a>
+                            
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                          <div class="h-entry">
+                            <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"  onclick="saveImage(this.src)"></a>
+                            
+                          </div> 
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="h-entry">
+                              <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+                             
+                            </div> 
+                          </div>
+                          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="h-entry">
+                              <a href="image-show.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+                              
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="h-entry">
+                              <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+                              
+                            </div> 
+                          </div>    
+                      </div>
+          </div>
+      </section>
 
       <footer class="site-footer">
         <div class="container">
@@ -159,9 +190,13 @@
       crossorigin="anonymous"
     ></script>
     <script>
-    var imageDetails=localStorage.getItem("imageAddress")
-    console.log(imageDetails)
-    document.getElementById("mainImage").setAttribute("src",imageDetails)
+            var imageDetails=localStorage.getItem("imageAddress")
+            var folder= imageDetails.substring(imageDetails.lastIndexOf("/")+1).split(".")[0]
+            var allImages = document.getElementsByTagName("img")
+            for(i=0;i<allImages.length;i++){
+                var ino=i+1
+                allImages[i].setAttribute("src","images/"+folder+"/image"+ino+".jpg")
+            }
     </script>
   </body>
 </html>
