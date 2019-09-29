@@ -2064,3 +2064,14 @@ ul.photos-area-info {
 .mainImage-area img {
   width: 50%;
 }
+
+span {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+span.pre {
+  border-right: 2px solid;
+  padding-right: 8px;
+}
