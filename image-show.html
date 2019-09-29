@@ -110,11 +110,14 @@
       </section>
      <section>
        <div class="container">
+         <div class="ro">
+            <p style="text-align: center"><a href="gallery-page.html">Go To Gallery</a></p>
+
+         </div>
          <div class="row">
-           <p><a href="gallery-page.html">Go To Gallery</a></p>
            <div class="col-md-12 mainImage-area">
              <img src="" alt="" id ="mainImage">
-             <p><span onclick="goToImage(-1)" class="pre">Previous Image</span> <span onclick="goToImage(1)">Next Image</span></p>
+             <p><span onclick="goToImage(-1)" class="imgNav left">Previous Image</span> <span onclick="goToImage(1)"  class="imgNav">Next Image</span></p>
            </div>
          </div>
        </div>
@@ -168,10 +171,6 @@
       imgNo=imgNo+iNo
       var folder= imageDetails.substring(imageDetails.lastIndexOf("/")+1).split(".")[0]
       document.getElementById("mainImage").setAttribute("src","images/"+folder+"/image"+imgNo+".jpg" )
-
-console.log("images/"+folder+"/image"+imgNo+".jpg")
-console.log(folder)
-
     }
     </script>
   </body>

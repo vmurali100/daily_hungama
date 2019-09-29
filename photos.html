@@ -122,7 +122,7 @@
             </ul>
           </div>
   
-          <div class="row">
+          <div class="row gallery" >
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
               <div class="h-entry">
                 <a href="image-show.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"  onclick="saveImage(this.src)"></a>
@@ -206,13 +206,17 @@
     ></script>
     <script>
      document.getElementById("photos-area-info").onclick=function (event){
+      showPhotos(event.target.innerHTML)
+     }
+
+     function showPhotos(event){
         var allImages = document.getElementsByTagName("img")
-        if(event.target.innerHTML== "Actor Photos"){
+        if(event== "Actor Photos"){
             for(i=0;i<allImages.length;i++){
                 var ino=i+1
                 allImages[i].setAttribute("src","images/actor"+ino+".jpg")
             }
-        }else if(event.target.innerHTML== "Actress Photos"){
+        }else if(event== "Actress Photos"){
             for(i=0;i<allImages.length;i++){
                 var ino=i+1
                 allImages[i].setAttribute("src","images/actress"+ino+".jpg")
@@ -223,6 +227,8 @@
        console.log(imageAddress)
        localStorage.setItem("imageAddress",imageAddress)
       }
+
+      showPhotos("Actress Photos")
     </script>
   </body>
 </html>

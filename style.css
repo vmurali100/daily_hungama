@@ -2065,13 +2065,16 @@ ul.photos-area-info {
   width: 50%;
 }
 
-span {
+.imgNav {
   display: inline-block;
   font-size: 20px;
   margin-top: 10px;
   cursor: pointer;
 }
-span.pre {
+.left {
   border-right: 2px solid;
   padding-right: 8px;
+}
+.gallery img {
+  height: 500px;
 }
