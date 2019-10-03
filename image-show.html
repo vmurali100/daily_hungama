@@ -164,9 +164,9 @@
     ></script>
     <script>
     var imageDetails=localStorage.getItem("imageAddress")
-    console.log(imageDetails)
     document.getElementById("mainImage").setAttribute("src",imageDetails)
     var imgNo=Number(imageDetails.substring(imageDetails.lastIndexOf('.')-1,imageDetails.lastIndexOf('.')))
+    
     function goToImage(iNo){
       imgNo=imgNo+iNo
       var folder= imageDetails.substring(imageDetails.lastIndexOf("/")+1).split(".")[0]
