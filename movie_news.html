@@ -109,10 +109,10 @@
        
       </section>
       <div class="site-section " id="training-section">
-        <div class="container">
+        <div class="container"  id="main_section">
          
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 left-content">
                 <div class="row bg-light movie-news-content">
                     <div class="col-md-12 text-center movie-stories">
                       <h2 class="section-title mb-3 mt-3">Latest movie Stories </h2>
@@ -198,7 +198,7 @@
                   </ul>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 right-content">
               <div class="row movie-news-content bg-light">
                   <div class="col-12  movie-stories">
                       <h4 class="section-title mb-3 mt-3">Latest political Stories</h4>
@@ -278,8 +278,21 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script>
-   
+    $(document).ready(function (){
+      $(window).resize(function (){
+        if($(window).width()<768){
+          $("#main_section").removeClass("container")
+
+        }
+
+        else{
+          $("#main_section").addClass("container")
+
+        }
+      })
+    })
     </script>
   </body>
 </html>
