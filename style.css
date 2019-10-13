@@ -2140,3 +2140,56 @@ p.vs {
   width: 70%;
   float: left;
 }
+.single-feature-post.video-post {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 500px;
+}
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.single-blog-post.style-2 .post-thumbnail {
+  position: relative;
+  z-index: 1;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 110px;
+  flex: 0 0 110px;
+  max-width: 110px;
+  width: 110px;
+}
+.single-blog-post.style-2 .post-content {
+  position: relative;
+  z-index: 1;
+  padding-left: 20px;
+}
+.vizew-nav-tab {
+  position: relative;
+  z-index: 1;
+  /* background-color: #393c3d; */
+  width: 100%;
+  height: 500px;
+  overflow: scroll;
+}
+.single-feature-post.video-post .play-btn {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: -30px;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  background-color: #db4437;
+  border-radius: 50%;
+  color: #ffffff;
+  line-height: 60px;
+  text-align: center;
+  padding: 0 0 0 3px;
+  z-index: 99;
+}
+.single-feature-post.video-post .play-btn:hover, .single-feature-post.video-post .play-btn:focus {
+  background-color: #0f1112;
+}
