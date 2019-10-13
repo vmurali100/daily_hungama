@@ -2103,14 +2103,43 @@ ul.photos-area-info {
   border-radius: 5px;
 }
 
-.movie-news-item img {
-  width: 60%;
-}
+
 .training li .img {
   text-align: right;
+  width: 29%;
+  float: left;
+  margin-top: 10px;
+}
+.main_list_item {
+  overflow: auto;
 }
 p.vs {
   text-align: center;
   color: red;
   font-size: 20px;
+}
+.client-box {
+  background-color: #fff;
+  box-shadow: 1px 3px 7px #eee;
+  margin-bottom: 2.714em;
+  padding: 10px;
+}
+#client-speech .client-box .about-client {
+  width: 32%;
+  float: left;
+  
+}
+
+.client-box .about-client {
+  width: 32%;
+  float: left;
+}
+.news_articles {
+  width: 70%;
+  float: left;
+}
+
+.news_Items_list {
+  width: 70%;
+  float: left;
 }
