@@ -111,33 +111,8 @@
 
       <section class="site-section">
         <div class="container">
-          <div class="row">
-            <div class="col-md-6 news-article bg-light">
-                    <div class="col-12 text-center movie-stories">
-                            <h4 class="section-title mb-3 mt-3">Latest political Stories Title</h4>
-                            <span class="text-muted d-block mb-1 article-by">Article By</span>
-
-                        </div>
-              <p><img src="images/img_3.jpg" alt="Image"  class="img-fluid"></p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae expedita cumque necessitatibus ducimus debitis totam, quasi praesentium eveniet tempore possimus illo esse, facilis? Corrupti possimus quae ipsa pariatur cumque, accusantium tenetur voluptatibus incidunt reprehenderit, quidem repellat sapiente, id, earum obcaecati.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iste, repudiandae facere aperiam sapiente, officia delectus soluta molestiae nihil corporis animi quos ratione qui labore? Sint eaque perspiciatis minus illum.</p>
-              <p>Consectetur porro odio quod iure quaerat cupiditate similique, dolor reprehenderit molestias provident, esse dolorum omnis architecto magni amet corrupti neque ratione sunt beatae perspiciatis? Iste pariatur omnis sed ut itaque.</p>
-              <p>Id similique, rem ipsam accusantium iusto dolores sit velit ex quas ea atque, molestiae. Sint, sed. Quisquam, suscipit! Quisquam quibusdam maiores fugiat eligendi eius consequuntur, molestiae saepe commodi expedita nemo!</p>
-             
-            </div>
-            <div class="col-md-6 news-article bg-light">
-                    <div class="col-12 text-center movie-stories">
-                            <h4 class="section-title mb-3 mt-3">Latest political Stories Title</h4>
-                            <span class="text-muted d-block mb-1  article-by">Artcle By </span>
-
-                        </div>
-                <p><img src="images/img_3.jpg" alt="Image"  class="img-fluid"></p>
-                <p>Amet sint explicabo maxime accusantium qui dicta enim quia, nostrum id libero voluptates quae suscipit dolor quam tenetur dolores inventore illo laborum, corporis non ex, debitis quidem obcaecati! Praesentium maiores illo atque error! Earum, et, fugit. Sint, delectus molestiae. Totam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iste, repudiandae facere aperiam sapiente, officia delectus soluta molestiae nihil corporis animi quos ratione qui labore? Sint eaque perspiciatis minus illum.</p>
-                <p>Consectetur porro odio quod iure quaerat cupiditate similique, dolor reprehenderit molestias provident, esse dolorum omnis architecto magni amet corrupti neque ratione sunt beatae perspiciatis? Iste pariatur omnis sed ut itaque.</p>
-                <p>Id similique, rem ipsam accusantium iusto dolores sit velit ex quas ea atque, molestiae. Sint, sed. Quisquam, suscipit! Quisquam quibusdam maiores fugiat eligendi eius consequuntur, molestiae saepe commodi expedita nemo!</p>
-               
-              </div>
+          <div class="row" id="news-article-area">
+           
           </div>
         </div>
       </section>
@@ -267,7 +242,62 @@
         </div>
       </footer>
     </div>
+    <script>
+                        
+      // var elements=[{elementName="div",parentElement:"news-article-area",className=""}]
+      function createElementDynamic(eName,content,pElement,cName,id,src){
+        var ele = document.createElement(eName)
+        ele.innerHTML=content
+        ele.setAttribute("class",cName)
+        ele.setAttribute("id",id)
+        if(src!=undefined){
+          ele.setAttribute("src",src)
+        }
+
+        document.getElementById(pElement).appendChild(ele)
+      }
+      var movieArticles=3
+
+      function createSubContent(i){
+          createElementDynamic("div","","news-article"+i,"col-12 text-center movie-stories","news-article-heading"+i)
+          createElementDynamic("h4","Latest political Stories Title","news-article-heading"+i,"section-title mb-3 mt-3","")
+          createElementDynamic("span","Article By","news-article-heading"+i,"text-muted d-block mb-1 article-by","")
+          createElementDynamic("div","","news-article"+i,"","imageDiv"+i)
+          createElementDynamic("img","","imageDiv"+i,"img-fluid","","images/img_3.jpg")
+          var pContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae expedita cumque necessitatibus ducimus debitis totam, quasi praesentium eveniet tempore possimus illo esse, facilis? Corrupti possimus quae ipsa pariatur cumque, accusantium tenetur voluptatibus incidunt reprehenderit, quidem repellat sapiente, id, earum obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae expedita cumque necessitatibus ducimus debitis totam, quasi praesentium eveniet tempore possimus illo esse, facilis? Corrupti possimus quae ipsa pariatur cumque, accusantium tenetur voluptatibus incidunt reprehenderit, quidem repellat sapiente, id, earum obcaecati."
+          createElementDynamic("p",pContent,"news-article"+i,"","",)
+      }
+      function createMovieArticles(movieArticles){
+        if(movieArticles == 1){
+          createElementDynamic("div","","news-article-area","col-md-12 news-article bg-light","news-article1")
+          createSubContent(1)          
+          }else if(movieArticles==2){
+            for(i=0;i<movieArticles;i++){
+              createElementDynamic("div","","news-article-area","col-md-6 news-article bg-light","news-article"+i)
+              createSubContent(i)            
+              }
+          
+          }else{
+            createElementDynamic("div","","news-article-area","col-md-6 news-article bg-light","news-article1")
+            createSubContent(1) 
+            createElementDynamic("div","","news-article-area","col-md-6 news-article bg-light","news-article2")
+            for(i=1;i<movieArticles;i++){
+              createElementDynamic("div","","news-article2","col-12 text-center movie-stories","news-article-heading-multi"+i)
+              createElementDynamic("h4","Latest political Stories Title","news-article-heading-multi"+i,"section-title mb-3 mt-3","")
+              createElementDynamic("span","Article By","news-article-heading-multi"+i,"text-muted d-block mb-1 article-by","")
+              createElementDynamic("div","","news-article2","imageDivMulti","imageDivMulti"+i)
+              createElementDynamic("img","","imageDivMulti"+i,"img-fluid","","images/img_3.jpg")
+              var pContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae expedita cumque necessitatibus ducimus debitis totam, quasi praesentium eveniet tempore possimus illo esse, facilis? Corrupti possimus quae ipsa pariatur cumque, accusantium tenetur voluptatibus incidunt reprehenderit, quidem repellat sapiente, id, earum obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae expedita cumque necessitatibus ducimus debitis totam, quasi praesentium eveniet tempore possimus illo esse, facilis? Corrupti possimus quae ipsa pariatur cumque, accusantium tenetur voluptatibus incidunt reprehenderit, quidem repellat sapiente, id, earum obcaecati."
+            createElementDynamic("p",pContent,"news-article2","","",)
+            }
+          }
+       
+      }
+      createMovieArticles(movieArticles)
     
+      // <div id="imageDiv"><img src="images/img_3.jpg" alt="Image"  class="img-fluid"></div>
+
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       crossorigin="anonymous"

@@ -2193,3 +2193,19 @@ p.vs {
 .single-feature-post.video-post .play-btn:hover, .single-feature-post.video-post .play-btn:focus {
   background-color: #0f1112;
 }
+.imageDivMulti img {
+  height: 200px;
+}
+@media (min-width: 768px){
+  .col-md-6 {
+    max-width: 49%;
+    margin: 2px;
+}
+}
+
+div#imageDiv1 {
+  text-align: center;
+}
+div#imageDiv1 img {
+  width: 60%;
+}
